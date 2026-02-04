@@ -1,0 +1,123 @@
+#include "framework.h"
+#include "DrawEllipse.h"
+
+#define MAX_LOADSTRING 100
+
+// Глобальные переменные:
+HINSTANCE hInst;// текущий экземпляр
+
+// Отправить объявления функций, включенных в этот модуль кода:
+BOOL                InitInstance(HINSTANCE, int);
+INT_PTR CALLBACK    DrawEllipseDlg(HWND, UINT, WPARAM, LPARAM);
+
+
+
+int WINAPI _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow)
+{
+    UNREFERENCED_PARAMETER(hPrevInstance);
+    UNREFERENCED_PARAMETER(lpCmdLine);
+
+    // TODO: Разместите код здесь.
+    // Выполнить инициализацию приложения:
+    if (!InitInstance (hInstance, nCmdShow))
+    {
+        return FALSE;
+    }
+
+    return 0;
+}
+
+//
+//   ФУНКЦИЯ: InitInstance(HINSTANCE, int)
+//
+//   ЦЕЛЬ: Сохраняет маркер экземпляра и создает главное окно
+//
+//   КОММЕНТАРИИ:
+//
+//        В этой функции маркер экземпляра сохраняется в глобальной переменной, а также
+//        создается и выводится главное окно программы.
+//
+
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+{
+    hInst = hInstance; // Сохранить маркер экземпляра в глобальной переменной
+    INT_PTR nResponse = DialogBox(hInst, MAKEINTRESOURCE(IDD_DRAWELLIPSE_DIALOG), NULL, DrawEllipseDlg);
+    if (nResponse == IDOK)
+    {
+        // TODO: Введите код для обработки закрытия диалогового окна
+        //  с помощью кнопки "ОК"
+    }
+    else if (nResponse == IDCANCEL)
+    {
+        // TODO: Введите код для обработки закрытия диалогового окна
+        //  с помощью кнопки "Отмена"
+    }
+    else if (nResponse == -1)
+        return FALSE;
+   return TRUE;
+}
+
+// Обработчик сообщений для окна "DrawEllipse".
+INT_PTR CALLBACK DrawEllipseDlg(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    UNREFERENCED_PARAMETER(lParam);
+    switch (message)
+    {
+    case WM_INITDIALOG:
+        return (INT_PTR)TRUE;
+    case WM_COMMAND:
+        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+        {
+            EndDialog(hDlg, LOWORD(wParam));
+            return (INT_PTR)TRUE;
+        }
+        break;
+    case WM_PAINT:
+        {
+            PAINTSTRUCT ps;
+            HDC hdc = BeginPaint(hDlg, &ps);
+            // Размеры области рисования
+            RECT rcPaint = ps.rcPaint;
+            // Размеры овала (эллипса)
+            int nWidth = rcPaint.right - rcPaint.left;
+            int nHeight = rcPaint.bottom - rcPaint.top;
+            // Красный карандаш (перо)
+            HPEN oRedPen = CreatePen(PS_SOLID, 5, RGB(255, 0, 0)), oDefaultPen;
+            // Жёлтая сплошная кисть
+            HBRUSH oYellowBrush = CreateSolidBrush(RGB(255, 255, 0)), oDefaultBrush;
+            /*
+            * Чёрная сплошная кисть - цвет заливки области рисования, клиентской части диалогово окна : без рамок,
+              меню и кнопок "свернуть","развернуть","закрыть" (рабочая область приложения).
+            */
+            HBRUSH oBlackBrush = CreateSolidBrush(RGB(0, 0, 0));
+            /*
+            * Процесс создаиния рисунка на диаловом окне. Жёлтый овал с красным контуром толщиной 5 пикселей
+            * и размерами равными клиентской области (области рисования) также в пикселях.
+            Весь рисунок строится на чёрном фоне.
+            */
+            FillRect(hdc, &rcPaint, oBlackBrush);
+            oDefaultPen = SelectObject(hdc, oRedPen);
+            oDefaultBrush = SelectObject(hdc, oYellowBrush);
+            Ellipse(hdc, 0, 0, nWidth, nHeight);
+            // Очиска ресурсов и завершение рисования.
+            oRedPen = SelectObject(hdc, oDefaultPen);
+            oYellowBrush = SelectObject(hdc, oDefaultBrush);
+            DeleteObject(oBlackBrush);
+            DeleteObject(oRedPen);
+            DeleteObject(oYellowBrush);
+            // TODO: Добавьте сюда любой код прорисовки, использующий HDC...
+            EndPaint(hDlg, &ps);
+        }
+        break;
+        /*
+        * Изменение размеров окна приложения и масштабирование рисунка под размеры окна, т.е.
+        * он дожен быть вписан в диалоговое окно прложения.
+        */
+    case WM_SIZE:
+        {
+            InvalidateRect(hDlg, NULL, TRUE);
+        }
+        break;
+    }
+    return (INT_PTR)FALSE;
+}
