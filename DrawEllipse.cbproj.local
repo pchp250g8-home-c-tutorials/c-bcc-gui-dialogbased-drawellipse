@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.446,D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\File1.c=C:\Users\PC\Documents\Embarcadero\Studio\Projects\File1.c</Transaction>
     <Transaction>1899.12.30 00:00:00.000.271,=C:\Users\PC\Documents\Embarcadero\Studio\Projects\File1.c</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.446,C:\Users\PC\Documents\Embarcadero\Studio\Projects\File1.c=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\File1.c</Transaction>
     <Transaction>1899.12.30 00:00:00.000.029,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.rc</Transaction>
     <Transaction>1899.12.30 00:00:00.000.889,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\small.ico</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.422,D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipsePCH1.h=C:\Users\PC\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
     <Transaction>1899.12.30 00:00:00.000.579,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\targetver.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.074,=C:\Users\PC\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.527,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\resource.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.492,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\framework.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.773,D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.c=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\File1.c</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.306,D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.cbproj=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.474,D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.cbproj=C:\Users\PC\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.773,D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\File1.c=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.c</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.474,C:\Users\PC\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.cbproj</Transaction>
     <Transaction>1899.12.30 00:00:00.000.842,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.ico</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.492,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\framework.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.527,=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\resource.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.074,=C:\Users\PC\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.422,C:\Users\PC\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipsePCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.306,D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.cbproj=D:\Projects\Programming\C\BDS\GUI\DoalogBased\Graphics\DrawEllipse\DrawEllipse.cbproj</Transaction>
   </Transactions>
 </BorlandProject>
